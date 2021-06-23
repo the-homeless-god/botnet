@@ -4,4 +4,3 @@ class Bot:
         self.message = message
         
         return self.message
-        
