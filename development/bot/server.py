@@ -1,12 +1,16 @@
 from bot import Bot
+from adapter import Adapter
 
 def main():
-    bot = Bot()
+    bot = Adapter()
     active_session_flag = True
 
     while(active_session_flag):
         message = input()
-        bot.echo(message)
+
+        print(f'Bot: {bot.get_echo(message)}')
+
+
 
 main()
 
