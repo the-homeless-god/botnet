@@ -1,12 +1,11 @@
 from bot import Bot
 
 def main():
-    active_session_flag = True
     bot = Bot()
+    active_session_flag = True
 
-
-    while (active_session_flag == True):
+    while(active_session_flag):
         message = input()
         bot.echo(message)
-    
-main() 
+
+main()
