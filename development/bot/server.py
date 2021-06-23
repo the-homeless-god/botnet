@@ -9,8 +9,4 @@ def main():
         message = input()
 
         print(f'Bot: {bot.get_echo(message)}')
-
-
-
 main()
-
