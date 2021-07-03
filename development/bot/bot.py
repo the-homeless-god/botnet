@@ -6,7 +6,8 @@ class Bot:
         return self.message
     
     def dialog(self, message):
-        self.message = message
+        self.message = message.lower()
+
 
         """data for dialog"""
         greeting_message = ['привет', 'добрый утро', 'добрый день', 'добрый вечер', 'здравствуй', 'здравствуйте', 'приветствую']
@@ -15,6 +16,7 @@ class Bot:
 
         farewell_message = ['пока', 'прощай', 'до свидания', 'удачи', 'успехов']
 
+        """dialog"""
         if message in greeting_message:
             return 'Привет, я бот Name'
         
@@ -24,13 +26,7 @@ class Bot:
         if message in farewell_message:
             return 'Приходи ещё'
 
-
         else:
-            return 'я вас не понимаю'
+            return 'Я вас не понимаю'
     
-        
-
-        
-    
-
         

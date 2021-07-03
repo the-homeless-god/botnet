@@ -8,7 +8,9 @@ def main():
     while(active_session_flag):
         message = input()
 
-        print(f'Bot: {bot.dialog(message)}')
+        message = message.lower()
+
+        print(bot.dialog(message))
 
 main()
 
