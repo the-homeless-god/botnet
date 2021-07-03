@@ -2,15 +2,13 @@ from bot import Bot
 from adapter import Adapter
 
 def main():
-    bot = Adapter()
+    bot = Bot()
     active_session_flag = True
 
     while(active_session_flag):
         message = input()
 
-        print(f'Bot: {bot.get_echo(message)}')
-
-
+        print(f'Bot: {bot.dialog(message)}')
 
 main()
 
