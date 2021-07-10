@@ -3,9 +3,8 @@ from adapter import Adapter
 
 def main():
     bot = Bot()
-    active_session_flag = True
-
-    while(active_session_flag):
+    
+    while(True):
         message = input()
 
         message = message.lower()

@@ -9,7 +9,8 @@ class Bot:
         self.message = message.lower()
 
 
-        """data for dialog"""
+        """data for dialog: recognizing meaning from messages"""
+        
         greeting_message = ['привет', 'добрый утро', 'добрый день', 'добрый вечер', 'здравствуй', 'здравствуйте', 'приветствую']
 
         mood_message = ['как дела', 'как оно', 'как настроение', 'как успехи', 'всё нормально']
@@ -26,7 +27,6 @@ class Bot:
         if message in farewell_message:
             return 'Приходи ещё'
 
-        else:
-            return 'Я вас не понимаю'
+        return 'Я вас не понимаю'
     
         
