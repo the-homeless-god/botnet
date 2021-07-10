@@ -2,6 +2,7 @@ from bot import Bot
 from adapter import Adapter
 
 def main():
+  
     bot = Bot()
     
     while(True):
@@ -12,4 +13,3 @@ def main():
         print(bot.dialog(message))
 
 main()
-

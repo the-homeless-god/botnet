@@ -1,10 +1,5 @@
 class Bot:
-    
-    def echo(self, message):
-        self.message = message
-        
-        return self.message
-    
+  
     def dialog(self, message):
         self.message = message.lower()
 
@@ -28,5 +23,4 @@ class Bot:
             return 'Приходи ещё'
 
         return 'Я вас не понимаю'
-    
-        
+   
