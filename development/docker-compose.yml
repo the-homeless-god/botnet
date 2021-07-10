@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  web:
+  bot-server:
     build: .
     ports:
       - "5000:5000"
