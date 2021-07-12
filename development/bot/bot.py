@@ -1,5 +1,5 @@
 class Bot:
-    
+
     def echo(self, message):
         self.message = message
         
@@ -7,7 +7,9 @@ class Bot:
     
     def dialog(self, message):
         self.message = message
-
+  
+    def dialog(self, message):
+        self.message = message.lower()
 
         """data for dialog: recognizing meaning from messages"""
         
@@ -46,5 +48,3 @@ class Bot:
 
         """save context message"""
         context.append(message)
-
-    
