@@ -4,13 +4,13 @@ from adapter import Adapter
 import string
 
 def main():
+  
     bot = Bot()
     
     while(True):
         message = input()
 
         # preparing a message
-
         message = message.lower()
         
         # removing punctuation marks
@@ -28,4 +28,3 @@ def main():
         print(bot.dialog(message))
 
 main()
-
