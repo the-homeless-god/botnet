@@ -1,7 +1,4 @@
 from bot import Bot
-from adapter import Adapter
-
-import string
 
 def Server(message):
     bot = Bot()
