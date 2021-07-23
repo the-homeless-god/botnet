@@ -4,7 +4,7 @@ import telebot
 import settings
 
 # connecting the Bot - pyTelegramBotApi
-bot = telebot.TeleBot(settings.TOKEN)
+bot = telebot.TeleBot(settings.TELEGRAM_TOKEN)
 
 # defining the message type
 @bot.message_handler(content_types=['text'])

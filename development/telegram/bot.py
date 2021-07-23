@@ -8,8 +8,14 @@ class Bot:
     def dialog(self, message):
         self.message = message
 
+        # preparing a message
+        message = message.lower()
 
-        """data for dialog: recognizing meaning from messages"""
+        # removing punctuation marks
+        message = message.replace('.', '').replace(',', '').replace('?', '').replace('!', '').replace('.', '').replace(':', '').replace(' ', '')
+
+
+        # data for dialog: recognizing meaning from messages
         
         greeting_message = ['привет', 'доброеутро', 'добрыйдень', 'добрыйвечер', 'здравствуй', 'здравствуйте', 'приветствую', 'прив', 'здрасти', 'ктоты', 'тыкто']
 
@@ -23,7 +29,7 @@ class Bot:
 
         condolences_message = ['мнетебяжаль', 'ятебесочуствую', 'тысправишься', 'ятебесожалею', 'сожалею', 'соболезную', 'жаль', 'жальтебя']
         
-        """dialog"""
+        # dialog
 
         # greeting
         if message in greeting_message:
@@ -54,9 +60,9 @@ class Bot:
     def context_save(self, message):
         self.message = message
 
-        context = []
+        self.context = []
 
-        """save context message"""
-        context.append(message)
+        # save context message
+        self.context.append(message)
 
     

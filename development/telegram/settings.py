@@ -3,4 +3,4 @@ from dotenv import load_dotenv
 
 load_dotenv(".env")
 
-TOKEN = os.getenv("TOKEN")
+TELEGRAM_TOKEN = os.getenv("TOKEN")
