@@ -13,3 +13,4 @@ def get_text_messages(message):
 
 # launch the Bot
 bot.polling(none_stop = True)
+
