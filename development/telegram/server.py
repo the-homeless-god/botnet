@@ -10,5 +10,3 @@ def Server(message):
         # dialog
         return bot.dialog(message)
     
-
-
