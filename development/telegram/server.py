@@ -8,12 +8,7 @@ def Server(message):
         message = message.lower()
         
         # removing punctuation marks
-        message = message.replace('?', '')
-        message = message.replace('.', '')
-        message = message.replace('!', '')
-        message = message.replace(')', '')
-        message = message.replace('(', '')
-        message = message.replace(' ', '')
+        message = message.replace('.', '').replace(',', '').replace('?', '').replace('!', '').replace('.', '').replace(':', '').replace(' ', '')  
 
         # we save the context so that we can track what the user said later
         bot.context_save(message)
