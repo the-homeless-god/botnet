@@ -1,3 +1,5 @@
+import settings
+
 class Bot:
     
     def echo(self, message):
@@ -33,7 +35,7 @@ class Bot:
 
         # greeting
         if message in greeting_message:
-            return 'Привет, я робот Name'
+            return f'Привет, я Бот {settings.BOT_NAME}'
         
         # mood
         if message in mood_message:
