@@ -1,8 +1,11 @@
-import random
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-def write_msg(user_id, message):
+import server
+
+import random
+
+def write_message(user_id, message):
     vk.method('messages.send', {'user_id': user_id, 'message': message, 'random_id': random.getrandbits(64)})
 
 token = ""
@@ -16,7 +19,5 @@ for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW:
     
         if event.to_me:
-        
-            request = event.text
 
-            write_msg(event.user_id, "Нello world")
+            write_message(event.user_id, server.Server(event.text))
