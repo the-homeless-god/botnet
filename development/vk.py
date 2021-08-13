@@ -1,7 +1,7 @@
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-import server
+from commands.server import server, Server
 import settings
 
 import random
@@ -22,4 +22,4 @@ for event in longpoll.listen():
     
         if event.to_me:
 
-            write_message(event.user_id, server.Server(event.text))
+            write_message(event.user_id, server.server_user(event.text))
