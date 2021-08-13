@@ -1,8 +1,8 @@
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-from commands.server import server, Server
-import settings
+from base.server import server
+from base.settings import settings
 
 import random
 
