@@ -1,4 +1,4 @@
-import settings
+import base.settings as sett
 
 class Bot:
     
@@ -35,7 +35,7 @@ class Bot:
 
         # greeting
         if message in greeting_message:
-            return f'Привет, я Бот {settings.BOT_NAME}'
+            return f'Привет, я Бот {sett.BOT_NAME}'
         
         # mood
         if message in mood_message:

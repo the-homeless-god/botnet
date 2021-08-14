@@ -1,16 +1,15 @@
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-from base.server import server
-from base.settings import settings
-
+import base.server as server
+import base.settings as sett
 import random
 
 def write_message(user_id, message):
     vk.method('messages.send', {'user_id': user_id, 'message': message, 'random_id': random.getrandbits(64)})
 
 # We log in as a community
-vk = vk_api.VkApi(token=settings.VK_TOKEN)
+vk = vk_api.VkApi(token=sett.VK_TOKEN)
 
 # Working with messages
 longpoll = VkLongPoll(vk)
@@ -22,4 +21,4 @@ for event in longpoll.listen():
     
         if event.to_me:
 
-            write_message(event.user_id, server.server_user(event.text))
+            write_message(event.user_id, server.Server(event.text))

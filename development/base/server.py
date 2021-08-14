@@ -1,4 +1,4 @@
-from bot import Bot
+from base.bot import Bot
 
 def Server(message):
     bot = Bot()
