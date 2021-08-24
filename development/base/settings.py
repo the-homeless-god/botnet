@@ -9,3 +9,4 @@ if os.path.exists(".env"):
     TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
     BOT_NAME = os.getenv("BOT_NAME")
+    
