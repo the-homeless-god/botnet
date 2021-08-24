@@ -9,7 +9,7 @@ class Bot:
     
     def dialog(self, message):
         self.message = message
-
+    
         # preparing a message
         message = message.lower()
 
@@ -30,9 +30,7 @@ class Bot:
         compliment_message = ['тыкрутой', 'тымненравишься', 'тыхороший', 'тысупер']
 
         condolences_message = ['мнетебяжаль', 'ятебесочуствую', 'тысправишься', 'ятебесожалею', 'сожалею', 'соболезную', 'жаль', 'жальтебя']
-        
-        # dialog
-
+    
         # greeting
         if message in greeting_message:
             return f'Привет, я Бот {sett.BOT_NAME}'
