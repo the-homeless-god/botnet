@@ -64,4 +64,3 @@ class Bot:
 
         # save context message
         self.context.append(message)
-        

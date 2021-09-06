@@ -20,4 +20,3 @@ for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.to_me:
         
         write_message(event.user_id, server.Server(event.text))
-        
