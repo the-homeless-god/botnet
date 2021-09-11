@@ -1,0 +1,26 @@
+.primary {
+  background: rgba(28, 255, 232, 0.5);
+}
+
+.button {
+  cursor: pointer;
+}
+
+.secondary {
+  background: #332940;
+}
+
+.secondary,
+.primary {
+  color: #ffffff;
+  border-radius: 16px;
+  border: none;
+}
+
+.text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
