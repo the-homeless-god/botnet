@@ -26,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test && npm run size",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.ts src/**/*.tsx --fix",
     "update": "ncu",
