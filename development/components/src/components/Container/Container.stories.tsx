@@ -6,12 +6,12 @@ export default {
   component: Container,
 };
 
-export const ToStorybook = () => (
+export const ContainerStory = () => (
   <Container>
     <h1>Hello world</h1>
   </Container>
 );
 
-ToStorybook.story = {
+ContainerStory.story = {
   name: 'Container',
 };

@@ -18,4 +18,4 @@ module.exports = {
     '@semantic-release/git',
   ],
   preset: 'angular',
-}
+};
