@@ -6,13 +6,13 @@
 
 ## Todo
 
-- [] Issues
-- [] Pipeline
-- [] No pre-commit errors
-- [] Manual testing
-- [] All reviewers approve
-- [] Self review
-- [] Labels
-- [] Manual testing
+- [ ] Issues
+- [ ] Pipeline
+- [ ] No pre-commit errors
+- [ ] Manual testing
+- [ ] All reviewers approve
+- [ ] Self review
+- [ ] Labels
+- [ ] Manual testing
 
 ## Additional information (screenshots, links, etc)
