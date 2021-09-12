@@ -41,6 +41,11 @@ jobs:
     # Only release on push to master
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./development/components
+
     # Waits for test job
     needs: [test]
     steps:
