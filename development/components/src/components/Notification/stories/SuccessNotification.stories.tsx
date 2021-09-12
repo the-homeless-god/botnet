@@ -7,8 +7,8 @@ export default {
   component: SuccessNotification,
 };
 
-export const PrimaryButtonStory = () => <SuccessNotification {...propsFixture} text="success" />;
+export const SuccessNotificationStory = () => <SuccessNotification {...propsFixture} text="success" />;
 
-PrimaryButtonStory.story = {
+SuccessNotificationStory.story = {
   name: 'Success notification',
 };

@@ -7,8 +7,8 @@ export default {
   component: ErrorNotification,
 };
 
-export const PrimaryButtonStory = () => <ErrorNotification {...propsFixture} text="error" />;
+export const ErrorNotificationStory = () => <ErrorNotification {...propsFixture} text="error" />;
 
-PrimaryButtonStory.story = {
+ErrorNotificationStory.story = {
   name: 'Error notification',
 };

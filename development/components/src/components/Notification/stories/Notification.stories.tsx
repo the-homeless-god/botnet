@@ -9,7 +9,7 @@ export default {
   component: Notification,
 };
 
-export const ButtonStory = () => (
+export const NotificationStory = () => (
   <div
     style={{
       display: 'flex',
@@ -21,6 +21,6 @@ export const ButtonStory = () => (
   </div>
 );
 
-ButtonStory.story = {
-  name: 'Notification button',
+NotificationStory.story = {
+  name: 'Notification Notification',
 };
