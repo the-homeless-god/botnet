@@ -41,7 +41,7 @@ jobs:
     # Only release on push to master
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    
+
     defaults:
       run:
         working-directory: ./development/components
@@ -60,6 +60,12 @@ jobs:
 
       - name: Release
         run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Deploy Storybook
+        run: npx -p @storybook/storybook-deployer storybook-to-ghpages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
