@@ -65,7 +65,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Deploy Storybook
-        run: npx -p @storybook/storybook-deployer storybook-to-ghpages
+        run: npm run deploy-storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
