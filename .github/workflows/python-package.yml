@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [master]
     paths:
-      - "bot/**"
-      - "telegram/**"
+      - "development/bot/**"
+      - "development/telegram/**"
 
 jobs:
   build:
