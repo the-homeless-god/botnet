@@ -1,28 +1,11 @@
-name: Dependabot auto-merge
-on: pull_request_target
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
-permissions:
-  pull-requests: write
-  contents: write
-
-jobs:
-  dependabot:
-    defaults:
-      run:
-        working-directory: ./development/components
-
-    runs-on: ubuntu-latest
-
-    if: ${{ github.actor == 'dependabot[bot]' }}
-    steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Enable auto-merge for Dependabot PRs
-        if: ${{contains(steps.metadata.outputs.dependency-names, 'my-dependency') && steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
-        run: gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+version: 2
+updates:
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "./development/components" # Location of package manifests
+    schedule:
+      interval: "daily"

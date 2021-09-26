@@ -8,7 +8,7 @@ on:
   pull_request:
     branches: [master]
     paths:
-      - "components/**"
+      - "development/components/**"
 
 jobs:
   test:
@@ -64,11 +64,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Setup Git Account
-        run: git config --global user.name "Zimtir" && git config --global user.email "zimtir@mail.ru"
-
       - name: Deploy Storybook
-        run: npm run build-storybook && npm run deploy-storybook
+        run: npm run deploy-storybook -- --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
