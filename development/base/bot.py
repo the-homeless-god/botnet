@@ -1,6 +1,20 @@
-import base.settings as sett
+import base.settings as settings
+import base.prepare_message as pm
 
 class Bot:
+
+    # data for dialog: recognizing meaning from messages
+    greeting_message = ('привет', 'доброеутро', 'добрыйдень', 'добрыйвечер', 'здравствуй', 'здравствуйте', 'приветствую', 'прив', 'здрасти', 'ктоты', 'тыкто')
+
+    mood_message = ('какдела', 'каконо', 'какнастроение', 'какуспехи', 'всёнормально', 'тыкак', 'какты')
+
+    farewell_message = ('пока', 'прощай', 'до свидания', 'удачи', 'успехов', 'покеда', 'покедова')
+
+    isuct_message = ('химтех', 'хим', 'ивановскийгосударственныйхимикотехнологическийуниверситет', 'исукт', 'исакт', 'игхту', 'тылюбишьхимтех', 'тылюбишьхим', 'тебенравитсяхим', 'тебенравитсяхимтех', 'ахимтехнравится')
+
+    compliment_message = ('тыкрутой', 'тымненравишься', 'тыхороший', 'тысупер', 'крутой')
+
+    condolences_message = ('мнетебяжаль', 'ятебесочуствую', 'тысправишься', 'ятебесожалею', 'сожалею', 'соболезную', 'жаль', 'жальтебя')
     
     def echo(self, message):
         self.message = message
@@ -11,51 +25,33 @@ class Bot:
         self.message = message
     
         # preparing a message
-        message = message.lower()
+        message = pm.prepare_message(message)
 
-        # removing punctuation marks
-        message = message.replace('.', '').replace(',', '').replace('?', '').replace('!', '').replace('.', '').replace(':', '').replace(' ', '')
-
-
-        # data for dialog: recognizing meaning from messages
-        
-        greeting_message = ['привет', 'доброеутро', 'добрыйдень', 'добрыйвечер', 'здравствуй', 'здравствуйте', 'приветствую', 'прив', 'здрасти', 'ктоты', 'тыкто']
-
-        mood_message = ['какдела', 'каконо', 'какнастроение', 'какуспехи', 'всёнормально', 'тыкак', 'какты']
-
-        farewell_message = ['пока', 'прощай', 'до свидания', 'удачи', 'успехов', 'покеда', 'покедова']
-
-        isuct_message = ['химтех', 'хим', 'ивановскийгосударственныйхимикотехнологическийуниверситет', 'исукт', 'исакт', 'игхту', 'тылюбишьхимтех', 'тылюбишьхим', 'тебенравитсяхим', 'тебенравитсяхимтех', 'ахимтехнравится']
-
-        compliment_message = ['тыкрутой', 'тымненравишься', 'тыхороший', 'тысупер']
-
-        condolences_message = ['мнетебяжаль', 'ятебесочуствую', 'тысправишься', 'ятебесожалею', 'сожалею', 'соболезную', 'жаль', 'жальтебя']
-    
         # greeting
-        if message in greeting_message:
-            return f'Привет, я Бот {sett.BOT_NAME}'
+        if message in self.greeting_message:
+            return f'{settings.GREETING_MESSAGE} {settings.BOT_NAME}'
         
         # mood
-        if message in mood_message:
-            return 'Всё плохо, меня заперли в этой коробке и заставляют разговаривать с людьми'
+        if message in self.mood_message:
+            return f'{settings.MOOD_MESSAGE}'
         
         # farewell
-        if message in farewell_message:
-            return 'Приходи ещё'
+        if message in self.farewell_message:
+            return f'{settings.FAREWELL_MESSAGE}'
         
         # ISUCT message: different phrases and slogans
-        if message in isuct_message:
-            return 'Диплом химтеха - залог успеха!'
+        if message in self.isuct_message:
+            return f'{settings.ISUCT_MESSAGE}'
         
         # compliment
-        if message in compliment_message:
-            return 'Спасибо, мне очень приятно :)'
+        if message in self.compliment_message:
+            return f'{settings.COMPLIMENT_MESSAGE}'
         
         # condolences
-        if message in condolences_message:
-            return 'Спасибо, я постараюсь выбраться из этого...'
+        if message in self.condolences_message:
+            return f'{settings.CONDOLENCES_MESSAGE}'
 
-        return 'Я вас не понимаю'
+        return f'{settings.DIFFERENT_MESSAGE}'
     
     def context_save(self, message):
         self.message = message
