@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export interface ContainerProps {}
+export interface ContainerProps {
+  children?: ReactNode | string;
+}
 
 export const Container: React.FC<ContainerProps> = ({ children }) => <>{children}</>;

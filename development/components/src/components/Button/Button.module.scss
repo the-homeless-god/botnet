@@ -1,5 +1,5 @@
 .primary {
-  background: rgba(28, 255, 232, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .button {
@@ -13,14 +13,14 @@
 .secondary,
 .primary {
   color: #ffffff;
-  border-radius: 16px;
+  border-radius: 8px;
   border: none;
 }
 
 .text {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 16px;
+  padding: 12px;
 }

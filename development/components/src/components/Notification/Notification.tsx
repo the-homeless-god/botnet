@@ -1,5 +1,6 @@
 import React, { CSSProperties } from 'react';
 import cx from 'classnames';
+
 import css from './Notification.module.scss';
 
 export interface NotificationProps {
