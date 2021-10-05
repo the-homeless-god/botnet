@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NotificationProps, Notification } from './Notification';
 import css from './Notification.module.scss';
 
