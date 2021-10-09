@@ -3,7 +3,7 @@ import { propsFixture } from '../fixture';
 import { Card } from '../Card';
 
 export default {
-  title: 'Buttons/Card',
+  title: 'Cards/Card',
   component: Card,
 };
 
