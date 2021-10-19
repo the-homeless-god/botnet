@@ -1,10 +1,10 @@
 import base.server as server
 
 import telebot
-import base.settings as sett
+import base.settings as settings
 
 # connecting the Bot - pyTelegramBotApi
-bot = telebot.TeleBot(sett.TELEGRAM_TOKEN)
+bot = telebot.TeleBot(settings.TELEGRAM_TOKEN)
 
 # defining the message type
 @bot.message_handler(content_types=['text'])
