@@ -23,3 +23,4 @@ if os.path.exists(".env"):
     CONDOLENCES_MESSAGE = os.getenv("CONDOLENCES_MESSAGE")
 
     DIFFERENT_MESSAGE = os.getenv("DIFFERENT_MESSAGE")
+    
