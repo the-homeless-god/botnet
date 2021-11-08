@@ -53,7 +53,7 @@ class Bot:
 
         return f'{settings.DIFFERENT_MESSAGE}'
     
-    def context_save(self, message):
+    def save_context(self, message):
         self.message = message
 
         self.context = []
