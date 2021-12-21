@@ -1,21 +1,9 @@
 import base.settings as settings
 import base.prepare_message as pm
+import base.messages as ms
 
 class Bot:
 
-    # data for dialog: recognizing meaning from messages
-    greeting_message = ('привет', 'доброеутро', 'добрыйдень', 'добрыйвечер', 'здравствуй', 'здравствуйте', 'приветствую', 'прив', 'здрасти', 'ктоты', 'тыкто')
-
-    mood_message = ('какдела', 'каконо', 'какнастроение', 'какуспехи', 'всёнормально', 'тыкак', 'какты')
-
-    farewell_message = ('пока', 'прощай', 'до свидания', 'удачи', 'успехов', 'покеда', 'покедова')
-
-    isuct_message = ('химтех', 'хим', 'ивановскийгосударственныйхимикотехнологическийуниверситет', 'исукт', 'исакт', 'игхту', 'тылюбишьхимтех', 'тылюбишьхим', 'тебенравитсяхим', 'тебенравитсяхимтех', 'ахимтехнравится')
-
-    compliment_message = ('тыкрутой', 'тымненравишься', 'тыхороший', 'тысупер', 'крутой')
-
-    condolences_message = ('мнетебяжаль', 'ятебесочуствую', 'тысправишься', 'ятебесожалею', 'сожалею', 'соболезную', 'жаль', 'жальтебя')
-    
     def echo(self, message):
         self.message = message
         
@@ -28,6 +16,25 @@ class Bot:
         message = pm.prepare_message(message)
 
         # greeting
+        if message in ms.greeting_message:
+            return f'{settings.GREETING_MESSAGE} {settings.BOT_NAME}'
+        
+        # mood
+        if message in ms.mood_message:
+            return f'{settings.MOOD_MESSAGE}'
+        
+        # farewell
+        if message in ms.farewell_message:
+            return f'{settings.FAREWELL_MESSAGE}'
+        
+        # ISUCT message: different phrases and slogans
+        if message in ms.isuct_message:
+            return f'{settings.ISUCT_MESSAGE}'
+        
+        # compliment
+        if message in ms.compliment_message:
+            return f'{settings.COMPLIMENT_MESSAGE}'
+     
         if message in self.greeting_message:
             return f'{settings.GREETING_MESSAGE} {settings.BOT_NAME}'
         

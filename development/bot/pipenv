@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+flask = "*"
+flask-cors = "*"
+waitress = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+psycopg2-binary = "*"
+alembic = "*"
+sqlalchemy = "*"
+
+[dev-packages]
+mypy = "*"
+pylint = "==2.9.3"
+flake8 = "==3.9.2"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+server = "waitress-serve --listen=*:5000 app:app"
+test = "python -m unittest"
+pose_estimation_demo = "python -m scripts.pose_estimation_demo"
+pose_classification_demo = "python -m scripts.pose_classification_demo"
+model_training = "python -m scripts.model_training"
+pose_adding = "python -m scripts.pose_adding"
