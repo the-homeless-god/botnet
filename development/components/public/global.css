@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./fonts/Inter-Regular.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 900;
+  src: local('Inter'), url(./fonts/Inter-Bold.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat-Regular.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  src: local('Montserrat'), url(./fonts/Montserrat-Bold.ttf) format('opentype');
+}
