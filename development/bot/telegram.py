@@ -1,7 +1,7 @@
 import base.server as server
+import base.settings as settings
 
 import telebot
-import base.settings as settings
 
 # connecting the Bot - pyTelegramBotApi
 bot = telebot.TeleBot(settings.TELEGRAM_TOKEN)

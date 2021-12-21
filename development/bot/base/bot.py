@@ -34,14 +34,33 @@ class Bot:
         # compliment
         if message in ms.compliment_message:
             return f'{settings.COMPLIMENT_MESSAGE}'
+     
+        if message in self.greeting_message:
+            return f'{settings.GREETING_MESSAGE} {settings.BOT_NAME}'
+        
+        # mood
+        if message in self.mood_message:
+            return f'{settings.MOOD_MESSAGE}'
+        
+        # farewell
+        if message in self.farewell_message:
+            return f'{settings.FAREWELL_MESSAGE}'
+        
+        # ISUCT message: different phrases and slogans
+        if message in self.isuct_message:
+            return f'{settings.ISUCT_MESSAGE}'
+        
+        # compliment
+        if message in self.compliment_message:
+            return f'{settings.COMPLIMENT_MESSAGE}'
         
         # condolences
-        if message in ms.condolences_message:
+        if message in self.condolences_message:
             return f'{settings.CONDOLENCES_MESSAGE}'
 
         return f'{settings.DIFFERENT_MESSAGE}'
     
-    def save_context(self, message):
+    def context_save(self, message):
         self.message = message
 
         self.context = []

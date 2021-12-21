@@ -1,0 +1,26 @@
+.primary {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  cursor: pointer;
+}
+
+.secondary {
+  background: #332940;
+}
+
+.secondary,
+.primary {
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+}
