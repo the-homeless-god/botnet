@@ -1,5 +1,4 @@
 from bot import Bot
-from adapter import Adapter
 
 import string
 
