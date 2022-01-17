@@ -1,3 +1,5 @@
+from stop_face_recognition import camera_break
+
 import face_recognition
 import cv2
 import numpy as np
@@ -74,8 +76,7 @@ while True:
     cv2.imshow('Video', frame)
 
     # Hit 'q' on the keyboard to quit!
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    camera_break()
 
 video_capture.release()
 cv2.destroyAllWindows()
