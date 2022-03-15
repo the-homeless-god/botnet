@@ -4,4 +4,4 @@ import cv2
 def camera_break():
     if cv2.waitKey(1) & 0xFF == ord('q'):
         exit()
-        
+    
